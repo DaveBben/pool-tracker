@@ -10,3 +10,23 @@
 .card-block{
     padding: 20px;
 }
+
+.selected{
+    box-shadow: 2px 1px 5px 6px #dd0f3c;
+}
+
+.instruction{
+    color:white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.instruction h1 {
+    font-weight: 800;
+    padding-bottom: 20px;
+}
+
+.noSelect{
+    opacity: 0.5;
+    pointer-events: none;
+}

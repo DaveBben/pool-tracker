@@ -10,6 +10,7 @@ import {SamplePlayer} from './samplePlayer';
 })
 export class PlayersComponent implements OnInit {
   private samplePlayers: Array<SamplePlayer> = [];
+  private selectedPlayers: Array<SamplePlayer> = [];
 
 
   constructor(private playerService: PlayerService) { 
@@ -20,7 +21,22 @@ export class PlayersComponent implements OnInit {
     this.createSamplePlayers();
   }
 
-  createSamplePlayers(){
+  playerSelected(p: SamplePlayer): void{
+    p.toggleSelected();
+    this.selectedPlayers = this.samplePlayers.filter(p => p.isSelected() == true);
+  }
+
+  removePlayer(p: SamplePlayer): void{
+    p.toggleSelected();
+    let newPlayerArray = this.selectedPlayers.filter(player => player.id != p.id);
+    this.selectedPlayers = newPlayerArray;
+  }
+
+  playGame(){
+    this.selectedPlayers.map(p => this.playerService.addPlayer(p.name,p.id));
+  }
+
+  createSamplePlayers(): void{
     for(let i = 0; i< 6; i++){
       this.samplePlayers[i] = new SamplePlayer();
     }

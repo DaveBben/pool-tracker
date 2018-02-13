@@ -1,0 +1,33 @@
+.menu-div {
+    position: fixed;
+    top: 40%;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+    text-align: center;
+    padding: 30px;
+}
+
+.menu-div h1{
+    font-weight: 800;
+    font-size: 38px;
+    margin-bottom: 50px;
+    color:white;
+    text-align: center;
+}
+
+@media (min-width:768px){
+    .menu-div {
+        position: fixed;
+        top: 40%;
+        width: 40%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -40%);
+        transform: translate(-50%, -40%);
+        text-align: center;
+    }
+ 
+    
+
+}

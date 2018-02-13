@@ -5,7 +5,10 @@ import { AppComponent } from './app.component';
 import { PlayersComponent } from './players/players.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {PlayerService} from './players/player.service'
+import {PlayerService} from './players/player.service';
+import { PlayComponent } from './play/play.component';
+import { MenuComponent } from './menu/menu.component';
+import { ManageComponent } from './manage/manage.component'
 
 
 @NgModule({
@@ -13,6 +16,9 @@ import {PlayerService} from './players/player.service'
     AppComponent,
     PlayersComponent,
     HomeComponent,
+    PlayComponent,
+    MenuComponent,
+    ManageComponent,
   ],
   imports: [
     BrowserModule,

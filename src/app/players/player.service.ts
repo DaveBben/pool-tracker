@@ -10,13 +10,13 @@ private gamePlayers: Array<Player> = [];
      
   }
 
-  public addPlayer(name: string): void{
+  public addPlayer(name: string, id: string): void{
      let newArray: Array<Player> = [];
-     newArray = [...this.gamePlayers, new Player(name,0)];
+     newArray = [...this.gamePlayers, new Player(name,0,id)];
      this.gamePlayers = newArray;
   }
 
-  public removePlayer(id: number): void {
+  public removePlayer(id: string): void {
       let newPlayerArray = this.gamePlayers.filter(p => p.PlayerID != id);
       this.gamePlayers = newPlayerArray;
   }
@@ -25,7 +25,7 @@ private gamePlayers: Array<Player> = [];
       return this.gamePlayers.concat();
   }
 
-  public gameWonByPlayer(id: number): void {
+  public gameWonByPlayer(id: string): void {
       this.gamePlayers.map(p =>{
           if(p.PlayerID == id){
                 p.gameWon();

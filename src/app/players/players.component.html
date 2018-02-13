@@ -1,17 +1,31 @@
-<div class="gradient">
+<div class="gradient"></div>
   <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6 offset-md-3 instruction">
+        <h1>Select Two Players</h1>
+        <div class="table-responsive">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let p of selectedPlayers">
+                <td>{{p.name}}</td>
+                <td><button type="button" class="btn btn-outline-light" (click)="removePlayer(p)">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button type="button" class="btn btn-outline-light  btn-lg " *ngIf="selectedPlayers.length == 2">Play Game</button>
+        </div>
+      </div>
+    </div>
     <div class="row img-row">
-      <div class="col-md-4 col-sm-6" *ngFor="let p of samplePlayers">
-        <div href="" class="d-block mb-4 h-100">
-            <div class="card avatar" >
-          <img class="img-fluid img-thumbnail" [src]="p.image" alt="player">
-          <div class="card-block">
+      <div class="col-md-4 col-sm-6" *ngFor="let p of samplePlayers" [ngClass]="{'noSelect': selectedPlayers.length > 1}" >
+        <div class="d-block mb-4 h-100">
+          <div class="card avatar" (click)="playerSelected(p)" [ngClass]="{'selected': p.isSelected()}">
+            <img class="img-fluid img-thumbnail" [src]="p.image" alt="player">
+            <div class="card-block">
               <h4 class="card-title">{{p.name}}</h4>
             </div>
-            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-

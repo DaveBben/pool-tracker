@@ -1,19 +1,19 @@
 export class Player {
     private name: string;
     private gamesWon: number;
-    private id: number;
+    private id: string;
 
-    constructor(name: string, gamesWon: number){
+    constructor(name: string, gamesWon: number, id: string){
         this.name = name;
         this.gamesWon = gamesWon;
-        this.id = this.getRandomID();
+        this.id = id;
     }
 
     public get playerName():string {
         return this.name;
     }
 
-    public get PlayerID(): number {
+    public get PlayerID(): string {
         return this.id;
     }
 
