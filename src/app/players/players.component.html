@@ -1,36 +1,17 @@
 <div class="gradient">
   <div class="container">
-    <div class="row text-center img-row">
-      <div class="col-md-4 col-sm-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail avatar" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2016/10/27/6-headshot-photograph-myths-busted-by-marc-cartwright.jpg.644x480_q100.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail avatar" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2016/10/27/6-headshot-photograph-myths-busted-by-marc-cartwright.jpg.644x480_q100.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail avatar" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2016/10/27/6-headshot-photograph-myths-busted-by-marc-cartwright.jpg.644x480_q100.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2016/10/27/6-headshot-photograph-myths-busted-by-marc-cartwright.jpg.644x480_q100.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2016/10/27/6-headshot-photograph-myths-busted-by-marc-cartwright.jpg.644x480_q100.jpg" alt="">
-        </a>
-      </div>
-      <div class="col-md-4 col-sm-6">
-        <a href="#" class="d-block mb-4 h-100">
-          <img class="img-fluid img-thumbnail" src="https://d26oc3sg82pgk3.cloudfront.net/files/media/uploads/zinnia/2016/10/27/6-headshot-photograph-myths-busted-by-marc-cartwright.jpg.644x480_q100.jpg" alt="">
-        </a>
+    <div class="row img-row">
+      <div class="col-md-4 col-sm-6" *ngFor="let p of samplePlayers">
+        <div href="" class="d-block mb-4 h-100">
+            <div class="card avatar" >
+          <img class="img-fluid img-thumbnail" [src]="p.image" alt="player">
+          <div class="card-block">
+              <h4 class="card-title">{{p.name}}</h4>
+            </div>
+            </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+

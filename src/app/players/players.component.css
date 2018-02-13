@@ -4,4 +4,9 @@
 
 .avatar:hover{
     box-shadow: 2px 1px 5px 6px #e9ecef;
+    cursor: pointer;
+}
+
+.card-block{
+    padding: 20px;
 }

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PlayersComponent } from './players/players.component';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import {PlayerService} from './players/player.service'
 
 
 @NgModule({
@@ -17,7 +18,7 @@ import { HomeComponent } from './home/home.component';
     BrowserModule,
     poolRouting
   ],
-  providers: [],
+  providers: [PlayerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
