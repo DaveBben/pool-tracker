@@ -1,0 +1,7 @@
+.img-row{
+    margin-top: 100px;
+}
+
+.avatar:hover{
+    box-shadow: 2px 1px 5px 6px #e9ecef;
+}

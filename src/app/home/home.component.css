@@ -1,0 +1,55 @@
+.title-div {
+    position: fixed;
+    top: 40%;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+}
+
+.title-div h1{
+    font-weight: 800;
+    font-size: 38px;
+    margin-bottom: 50px;
+    color:white;
+    text-align: center;
+}
+
+.left-side{
+    float:left;
+}
+
+.title-div button{
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+
+  .brand-lg{
+      display: none;
+  }
+
+  
+
+@media (min-width:768px){
+    .title-div h1{
+        font-size: 45px;
+    }
+
+    .brand-lg{
+        display: block;
+    }
+
+    .brand-small{
+        display: none;
+    }
+    .title-div {
+       width:auto;
+    }
+    
+ 
+    
+
+}
