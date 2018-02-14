@@ -1,31 +1,42 @@
 <div class="gradient"></div>
-  <div class="container">
+<div class="container">
     <div class="row text-center">
-      <div class="col-md-6 offset-md-3 instruction">
-        <h1>Select Two Players</h1>
+        <div class="col-md-6 offset-md-3 instruction">
+            <h1>Select Two Players</h1>
+            <p>Select two players to challenge each other.</p>
+            <hr>
+        </div>
+      </div>
+  <div class="row">
+      <div class="col-md-4">
         <div class="table-responsive">
-          <table class="table">
+          <table class="table players-table">
             <tbody>
               <tr *ngFor="let p of selectedPlayers">
                 <td>{{p.name}}</td>
-                <td><button type="button" class="btn btn-outline-light" (click)="removePlayer(p)">Remove</button></td>
+                <td>
+                  <button type="button" class="btn btn-outline-light" (click)="removePlayer(p)">Remove</button>
+                </td>
               </tr>
             </tbody>
           </table>
           <button type="button" class="btn btn-outline-light  btn-lg " *ngIf="selectedPlayers.length == 2">Play Game</button>
         </div>
       </div>
-    </div>
-    <div class="row img-row">
-      <div class="col-md-4 col-sm-6" *ngFor="let p of samplePlayers" [ngClass]="{'noSelect': selectedPlayers.length > 1}" >
-        <div class="d-block mb-4 h-100">
-          <div class="card avatar" (click)="playerSelected(p)" [ngClass]="{'selected': p.isSelected()}">
-            <img class="img-fluid img-thumbnail" [src]="p.image" alt="player">
-            <div class="card-block">
-              <h4 class="card-title">{{p.name}}</h4>
-            </div>
+      <div class="offset-md-3 col-md-4 white-color">
+          <div class="table-responsive">
+            <h4>Available Players</h4>
+            <table class="table players-table">
+              <tbody>
+                <tr *ngFor="let p of availablePlayers">
+                  <td>{{p.playerName}}</td>
+                  <td>
+                    <button type="button" [disabled]= "p.isActive()" class="btn btn-outline-light" (click)="playerSelected(p)">Select</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
