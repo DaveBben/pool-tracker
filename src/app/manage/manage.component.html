@@ -1,3 +1,43 @@
-<p>
-  manage works!
-</p>
+<div class="gradient">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6 offset-md-3 instruction">
+        <h1>Player Management</h1>
+        <p>Add and remove players from the game.</p>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="input-group my-4 search-area">
+          <input [(ngModel)]="playerName" maxLength="20" type="text" class="form-control" placeholder="Enter Name">
+          <div class="input-group-append">
+            <button class="btn btn-outline-light" (click)="addPlayer()" type="button">Add Player</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table player-table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Remove</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of playerList">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td><button (click)="removePlayer(p)" type="button" class="btn btn-outline-light">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

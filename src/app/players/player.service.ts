@@ -10,9 +10,9 @@ private gamePlayers: Array<Player> = [];
      
   }
 
-  public addPlayer(name: string, id: string): void{
+  public addPlayer(name: string): void{
      let newArray: Array<Player> = [];
-     newArray = [...this.gamePlayers, new Player(name,0,id)];
+     newArray = [...this.gamePlayers, new Player(name)];
      this.gamePlayers = newArray;
   }
 

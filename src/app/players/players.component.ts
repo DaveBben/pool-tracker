@@ -33,7 +33,7 @@ export class PlayersComponent implements OnInit {
   }
 
   playGame(){
-    this.selectedPlayers.map(p => this.playerService.addPlayer(p.name,p.id));
+    this.selectedPlayers.map(p => this.playerService.addPlayer(p.name));
   }
 
   createSamplePlayers(): void{

@@ -1,0 +1,44 @@
+.search-area{
+    height: 50px;
+    margin-top: 25px !important;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+.search-area input{
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    font-size: 20px;
+  }
+
+  .search-area button{
+    background-color: rgba(255, 255, 255, 0);
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  .search-area input::placeholder{
+   color:#fff;
+  }
+  
+  .search-area input:focus{
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #f8f9fa !important;
+    color: #fff;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255,0.2);
+    font-size: 20px;
+  }
+
+  .player-table{
+      color: white;
+  }
+  
+
+    /* ////////////////// */
+    @media (min-width: 992px) {
+        .search-area{
+          width: 75%;
+        }
+
+        
+      }

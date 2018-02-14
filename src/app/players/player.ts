@@ -1,12 +1,13 @@
+import * as randomProfile from 'random-profile-generator';
 export class Player {
     private name: string;
     private gamesWon: number;
     private id: string;
 
-    constructor(name: string, gamesWon: number, id: string){
+    constructor(name: string){
         this.name = name;
-        this.gamesWon = gamesWon;
-        this.id = id;
+        this.gamesWon = 0;
+        this.id = this.getRandomID();
     }
 
     public get playerName():string {
@@ -25,7 +26,7 @@ export class Player {
         this.gamesWon += 1;
     }
 
-    private getRandomID(): number{
-        return Math.floor(Math.random() * (1000 - 1)) + 1;
+    private getRandomID(): string{
+        return randomProfile.guid();
     }
 }
