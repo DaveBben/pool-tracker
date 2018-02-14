@@ -30,8 +30,8 @@
             </thead>
             <tbody>
               <tr *ngFor="let p of playerList">
-                <td>{{p.id}}</td>
-                <td>{{p.name}}</td>
+                <td>{{p.playerID}}</td>
+                <td>{{p.playerName}}</td>
                 <td><button (click)="removePlayer(p)" type="button" class="btn btn-outline-light">Remove</button></td>
               </tr>
             </tbody>

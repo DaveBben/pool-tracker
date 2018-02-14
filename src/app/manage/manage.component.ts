@@ -15,6 +15,7 @@ export class ManageComponent implements OnInit {
 
   ngOnInit() {
    this.getPlayers();
+  
   }
 
   addPlayer(){
@@ -26,7 +27,7 @@ export class ManageComponent implements OnInit {
   }
 
   removePlayer(p: Player){
-    this.playerService.removePlayer(p.PlayerID);
+    this.playerService.removePlayer(p.playerID);
     this.getPlayers();
   }
 

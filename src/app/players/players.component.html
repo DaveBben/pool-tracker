@@ -5,25 +5,26 @@
             <h1>Select Two Players</h1>
             <p>Select two players to challenge each other.</p>
             <hr>
+            <button type="button" class="btn btn-outline-light  btn-lg " *ngIf="selectedPlayers.length == 2">Play Game</button>
         </div>
       </div>
   <div class="row">
-      <div class="col-md-4">
+      <div class="offset-md-1 col-md-4 white-color">
         <div class="table-responsive">
+          <h4>Current Players</h4>
           <table class="table players-table">
             <tbody>
               <tr *ngFor="let p of selectedPlayers">
-                <td>{{p.name}}</td>
+                <td>{{p.playerName}}</td>
                 <td>
                   <button type="button" class="btn btn-outline-light" (click)="removePlayer(p)">Remove</button>
                 </td>
               </tr>
             </tbody>
           </table>
-          <button type="button" class="btn btn-outline-light  btn-lg " *ngIf="selectedPlayers.length == 2">Play Game</button>
         </div>
       </div>
-      <div class="offset-md-3 col-md-4 white-color">
+      <div class="offset-md-2 col-md-4 white-color">
           <div class="table-responsive">
             <h4>Available Players</h4>
             <table class="table players-table">
@@ -31,7 +32,7 @@
                 <tr *ngFor="let p of availablePlayers">
                   <td>{{p.playerName}}</td>
                   <td>
-                    <button type="button" [disabled]= "p.isActive()" class="btn btn-outline-light" (click)="playerSelected(p)">Select</button>
+                    <button type="button" [disabled]= "p.active" class="btn btn-outline-light" (click)="playerSelected(p)">Select</button>
                   </td>
                 </tr>
               </tbody>
