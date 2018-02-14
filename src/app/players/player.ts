@@ -32,8 +32,12 @@ export class Player {
     }
 
 
-    public set wins(amount: number){
-        this._gamesWon += amount;
-    }
+   public gamesWon(amount: number){
+       this._gamesWon = amount;
+   }
+
+   public winGame(){
+       this._gamesWon +=1;
+   }
 
 }

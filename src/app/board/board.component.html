@@ -1,0 +1,34 @@
+<div class="gradient"></div>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-6 offset-md-3 instruction">
+        <h1>Leader Board</h1>
+        <p>Add and remove players from the game.</p>
+        <hr>
+        <button type="button"  routerLink="/"  class="btn btn-outline-light btn-lg">Main Menu</button><br><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        
+        <div class="table-responsive leader-board">
+          <table class="table player-table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Games Won</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let p of playerList">
+                <td>{{p.playerID}}</td>
+                <td>{{p.playerName}}</td>
+                <td>{{p.wins}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

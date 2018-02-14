@@ -17,6 +17,11 @@
     text-align: center;
 }
 
+.menu-div button{
+    width: 90%;
+    margin: 10px;
+}
+
 @media (min-width:768px){
     .menu-div {
         position: fixed;
@@ -26,6 +31,11 @@
         -webkit-transform: translate(-50%, -40%);
         transform: translate(-50%, -40%);
         text-align: center;
+    }
+
+    .menu-div button{
+        width: 50%;
+      
     }
  
     

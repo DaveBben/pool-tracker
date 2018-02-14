@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+/**
+ * The manage component allows the user to add and remove players.
+ */
 import {PlayerService} from '../players/player.service';
 import { Player } from '../players/player';
 
@@ -8,10 +11,10 @@ import { Player } from '../players/player';
   styleUrls: ['./manage.component.css']
 })
 export class ManageComponent implements OnInit {
-  private playerList: Array<Player> = [];
-  private playerName: string;
+  public playerList: Array<Player> = [];
+  public playerName: string;
 
-  constructor(private playerService: PlayerService) { }
+  constructor(public playerService: PlayerService) { }
 
   ngOnInit() {
    this.getPlayers();

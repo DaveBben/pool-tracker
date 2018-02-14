@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from './player';
 import { PlayerService } from './player.service';
-import { SamplePlayer } from './samplePlayer';
 
 @Component({
   selector: 'app-players',
@@ -9,11 +8,12 @@ import { SamplePlayer } from './samplePlayer';
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
-  private availablePlayers: Array<Player> = [];
-  private selectedPlayers: Array<Player> = [];
+  public availablePlayers: Array<Player> = [];
+  public selectedPlayers: Array<Player> = [];
+  public MAXSIZE: number = 2;
 
 
-  constructor(private playerService: PlayerService) {
+  constructor(public playerService: PlayerService) {
 
   }
 
@@ -22,10 +22,16 @@ export class PlayersComponent implements OnInit {
     this.selectedPlayers = this.availablePlayers.filter(p => p.active == true);
   }
 
+  /**
+   * When the player is selected, we are going to make them active so they cannot be used again
+   * @param p 
+   */
   playerSelected(p: Player): void {
+    if(this.selectedPlayers.length < this.MAXSIZE){
     this.playerService.togglePlayerActive(p.playerID);
     this.getAvailablePlayers();
     this.selectedPlayers = this.availablePlayers.filter(p => p.active == true);
+    }
   }
 
   removePlayer(p: Player): void {
@@ -35,9 +41,6 @@ export class PlayersComponent implements OnInit {
     this.selectedPlayers = newPlayerArray;
   }
 
-  playGame() {
-    
-  }
 
   getAvailablePlayers(): void {
     this.availablePlayers = this.playerService.getPlayers();

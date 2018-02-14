@@ -24,6 +24,12 @@
     padding-bottom: 20px;
 }
 
+.instruction button {
+  
+    margin-bottom: 20px;
+}
+
+
 .noSelect{
     opacity: 0.5;
     pointer-events: none;

@@ -1,0 +1,33 @@
+.game-over-div{
+    text-align: center;
+    color:white;
+    position: fixed;
+    top: 40%;
+    width: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+    transform: translate(-50%, -40%);
+}
+
+.game-over-div button{
+   margin: 10px;
+   width: 200px;
+
+}
+
+
+.game-over-div h1{
+   font-size: 60px;
+   font-weight: 800;
+}
+
+.game-over-div p{
+    font-size: 24px;
+    font-weight: 500;
+ }
+
+
+.game-over-div button{
+    font-size: 24px;
+    font-weight: 500;
+ }
