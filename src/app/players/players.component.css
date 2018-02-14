@@ -15,7 +15,9 @@
     box-shadow: 2px 1px 5px 6px #dd0f3c;
 }
 
-
+.players-table {
+    color: white;
+}
 
 .instruction h1 {
     font-weight: 800;
@@ -25,4 +27,8 @@
 .noSelect{
     opacity: 0.5;
     pointer-events: none;
+}
+
+.white-color{
+    color:white;
 }
